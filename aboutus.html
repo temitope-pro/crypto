@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale: 1.0">
+    <title>About Us - Cryptocurrency Trading</title>
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="homepage.css">
+    <style>
+        body {
+            background-color: #1c3a3b; /* Dark Glacier Background */
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #2f4f4f; /* Darker Glacier Color */
+            padding-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar a {
+            color: #ecf0f1;
+            display: block;
+            padding: 15px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .sidebar a:hover {
+            background-color: #27ae60;
+            color: white;
+        }
+
+        .sidebar h2 {
+            color: #fff;
+            font-size: 24px;
+            margin-left: 20px;
+        }
+
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+            animation: slideIn 1s ease-out;
+        }
+
+        /* About Us Section */
+        .about-us-section {
+            background: #34495e; /* Dark background */
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 80px;
+        }
+
+        .about-us-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #ecf0f1;
+            font-weight: bold;
+        }
+
+        .about-us-section p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: #ecf0f1;
+        }
+
+        .about-us-section .btn-primary {
+            font-size: 20px;
+            padding: 15px 30px;
+            background-color: #27ae60;
+            border: none;
+        }
+
+        .about-us-section .btn-primary:hover {
+            background-color: #1e824c;
+        }
+
+        /* Glacier Background Animation */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(0); }
+        }
+
+        /* Footer Section */
+        .footer {
+            background-color: #34495e;
+            padding: 40px 0;
+            color: #ecf0f1;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        .footer-links a {
+            color: #ecf0f1;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: #1e90ff;
+        }
+
+        /* Mobile Sidebar Toggle */
+        .sidebar-toggle {
+            display: none;
+        }
+
+        .sidebar-menu {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Mobile Version Styles */
+        @media (max-width: 768px) {
+            .prompt{
+                display: none;
+            }
+
+            .about-us-section {
+                padding: 40px 20px;
+            }
+
+            .about-us-section h2 {
+                font-size: 28px;
+            }
+
+            .about-us-section p {
+                font-size: 16px;
+            }
+
+            .about-us-section .btn-primary {
+                font-size: 18px;
+                padding: 12px 25px;
+            }
+
+            .footer-links li {
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            .navbar-nav {
+                display: flex;
+                flex-direction: column;
+            }
+
+            /* Make Sidebar Accessible in Mobile */
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            .content {
+                margin-left: 0;
+            }
+
+            /* Adjust the navbar for small screens */
+            .navbar {
+                flex-wrap: nowrap;
+            }
+
+            .navbar-toggler {
+                margin-left: auto;
+            }
+
+            /* Adjust the offcanvas for better visibility on mobile */
+            .offcanvas-body {
+                background-color: #34495e;
+            }
+
+            .offcanvas-body .navbar-nav .nav-link {
+                color: gray;
+            }
+
+            .offcanvas-body .navbar-nav .nav-link:hover {
+                color: white;
+            
+        }
+        .point{
+            display: none;
+        }
+    }
+    .offcanvas {
+    background-color: #2c3e50; /* Dark background for offcanvas */
+    color: white; /* Light text color */
+}
+
+.offcanvas-header {
+    background-color: #34495e; /* Slightly lighter dark color for the header */
+    color: white; /* Ensure header text is visible */
+}
+
+.offcanvas-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.offcanvas-body {
+    background-color: #2c3e50; /* Ensure body of the offcanvas has the same dark theme */
+    color: white; /* White text inside the body */
+}
+
+.offcanvas-body .navbar-nav .nav-link {
+    color: gray; /* Light color for links in offcanvas */
+}
+
+.offcanvas-body .navbar-nav .nav-link:hover {
+    color: white; /* Hover effect on links */
+}
+.bro{
+    display: flex;
+    justify-content: center;
+}
+.point:hover{
+    color:white;
+}
+body {
+            background-color: #2c3e50; /* Dark background */
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            background-color: #34495e; /* Darker navbar color */
+        }
+
+        .navbar-brand h2 {
+            font-size: 24px;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+ <!-- Navigation Bar -->
+ <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand bro" href="index.html">
+            <img src="PrintAdvertising.webp" alt="Logo" style="width: 50px; height: 50px;" />
+            <h2>CRYPTOCURRENCY</h2>
+        </a>
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 prompt">
+            <li class="nav-item">
+                <a class="nav-link point" href="homepage.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link point" href="conc.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link point" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link point" href="testimon.html">Testimonials</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link point" href="contact.html">Contact</a>
+            </li>
+        </ul>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</nav>
+
+<!-- Offcanvas Menu -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Navigation</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+                <a class="nav-link" href="homepage.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="conc.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="testimon.html">Testimonials</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+    <!-- Content -->
+    <div class="content">
+        <!-- About Us Section -->
+        <section id="about-us" class="about-us-section">
+            <h2>About Cryptocurrency Trading</h2>
+            <p>At Cryptocurrency Trading, we believe in providing our users with the best platform to trade and explore the world of digital currencies. Our mission is to make cryptocurrency trading easy, fast, and secure.</p>
+            <p>We offer a wide range of cryptocurrencies for trading, with advanced tools and resources to help both beginners and experienced traders succeed. Join us today and take control of your financial future.</p>
+            <a href="#crypto-list" class="btn btn-primary">Explore Cryptos</a>
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="footer">
+            <p>&copy; 2024 Cryptocurrency Trading. All Rights Reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </footer>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="temi.js"></script>
+</body>
+</html>

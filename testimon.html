@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials - Cryptocurrency Trading</title>
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="homepage.css">
+    <style>
+        body {
+            background-color: #1c3a3b;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .testimonials-section {
+            background-color: #34495e;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 80px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .testimonials-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #ecf0f1;
+            font-weight: bold;
+        }
+
+        .testimonials-section p {
+            font-size: 18px;
+            margin-bottom: 40px;
+            color: #ecf0f1;
+        }
+
+        .testimonial-card {
+            background-color: #2c3e50;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 20px;
+            color: #ecf0f1;
+            animation: slideIn 1s ease-out;
+        }
+
+        .testimonial-card h4 {
+            font-size: 22px;
+            color: #27ae60;
+            margin-bottom: 10px;
+        }
+
+        .testimonial-card p {
+            font-size: 16px;
+            color: #ecf0f1;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .testimonial-card .name {
+            font-size: 18px;
+            color: #ecf0f1;
+            font-weight: bold;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateY(50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Mobile Version Styles */
+        @media (max-width: 768px) {
+            .testimonial-card {
+                width: 90%;
+                margin: 20px auto;
+            }
+            .point{
+                display: none;
+            }
+        }
+
+        .offcanvas {
+    background-color: #2c3e50; /* Dark background for offcanvas */
+    color: white; /* Light text color */
+}
+
+.offcanvas-header {
+    background-color: #34495e; /* Slightly lighter dark color for the header */
+    color: white; /* Ensure header text is visible */
+}
+
+.offcanvas-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.offcanvas-body {
+    background-color: #2c3e50; /* Ensure body of the offcanvas has the same dark theme */
+    color: white; /* White text inside the body */
+}
+
+.offcanvas-body .navbar-nav .nav-link {
+    color: gray; /* Light color for links in offcanvas */
+}
+
+.offcanvas-body .navbar-nav .nav-link:hover {
+    color: white; /* Hover effect on links */
+}
+.bro{
+    display: flex;
+    justify-content: center;
+}
+.point:hover{
+    color:white;
+}
+body {
+            background-color: #2c3e50; /* Dark background */
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            background-color: #34495e; /* Darker navbar color */
+        }
+
+        .navbar-brand h2 {
+            font-size: 24px;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+     <!-- Navigation Bar -->
+     <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand bro" href="index.html">
+                <img src="PrintAdvertising.webp" alt="Logo" style="width: 50px; height: 50px;" />
+                <h2>CRYPTOCURRENCY</h2>
+            </a>
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 prompt">
+                <li class="nav-item">
+                    <a class="nav-link point" href="homepage.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link point" href="conc.html">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link point" href="aboutus.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link point" href="#">Testimonials</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link point" href="contact.html">Contact</a>
+                </li>
+            </ul>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Navigation</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                    <a class="nav-link" href="homepage.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="conc.html">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutus.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Testimonials</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="testimonials-section">
+    <h2>What Our Users Say</h2>
+    <p>Here's what some of our traders have to say about their experience with Cryptocurrency Trading.</p>
+
+    <!-- Testimonial Cards -->
+    <div class="row justify-content-center">
+        <!-- Testimonial 1 -->
+        <div class="col-md-4 testimonial-card">
+            <h4>"A Game Changer!"</h4>
+            <p>"Cryptocurrency Trading has completely changed how I manage my investments. The platform is easy to use, and the tools available make trading more efficient. I highly recommend it!"</p>
+            <div class="name">John Doe</div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="col-md-4 testimonial-card">
+            <h4>"Highly Secure and Reliable!"</h4>
+            <p>"I’ve tried multiple platforms before, but nothing compares to the security and speed offered by Cryptocurrency Trading. I can trade with confidence knowing my funds are safe."</p>
+            <div class="name">Jane Smith</div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="col-md-4 testimonial-card">
+            <h4>"Best Experience So Far!"</h4>
+            <p>"I’m a beginner and the resources here helped me get up to speed quickly. The customer support is top-notch, and I feel like I have a real edge in the market now."</p>
+            <div class="name">Sam Lee</div>
+        </div>
+    </div>
+</section>
+
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>

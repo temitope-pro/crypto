@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptocurrency Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #2c3e50; /* Dark background for the page */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background: linear-gradient(45deg, #34495e, #2c3e50); /* Gradient dark background */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            width: 400px;
+            text-align: center;
+            color: white;
+        }
+
+        .login-container h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #ecf0f1;
+        }
+
+        .login-container p {
+            font-size: 1rem;
+            margin-bottom: 30px;
+            color: #bdc3c7;
+        }
+
+        .input-group {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 15px;
+            font-size: 1rem;
+            background: #34495e;
+            border: 1px solid #2980b9;
+            color: white;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .input-group input:focus {
+            border-color: #3498db;
+        }
+
+        .input-group i {
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            font-size: 18px;
+            color: #bdc3c7;
+            cursor: pointer;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 15px;
+            background: #2980b9;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .login-btn:hover {
+            background: #3498db;
+        }
+
+        .social-login {
+            margin-top: 20px;
+        }
+
+        .social-login button {
+            width: 48%;
+            padding: 12px;
+            margin: 5px 1%;
+            background: #1abc9c;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .social-login button i {
+            margin-right: 8px;
+        }
+
+        .social-login button:hover {
+            background: #16a085;
+        }
+
+        @media (max-width: 600px) {
+            .login-container {
+                width: 90%;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <h1>Cryptocurrency Login</h1>
+        <p>Securely access your account</p>
+
+        <div class="input-group">
+            <input type="email" id="email" placeholder="Enter Email" required>
+            <i class="fa fa-envelope"></i>
+        </div>
+
+        <div class="input-group">
+            <input type="password" id="password" placeholder="Enter Password" required>
+            <i class="fa fa-eye-slash" id="eye-toggle"></i>
+        </div>
+
+        <button class="login-btn" id="loginBtn">Login</button>
+
+        <div class="social-login">
+            <button id="googleLogin"><i class="fab fa-google"></i> Login with Google</button>
+            <button id="facebookLogin"><i class="fab fa-facebook"></i> Login with Facebook</button>
+        </div>
+    </div>
+
+    <script>
+        // Password visibility toggle
+        const passwordInput = document.getElementById('password');
+        const eyeToggle = document.getElementById('eye-toggle');
+
+        eyeToggle.addEventListener('click', () => {
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                eyeToggle.classList.remove('fa-eye-slash');
+                eyeToggle.classList.add('fa-eye');
+            } else {
+                passwordInput.type = 'password';
+                eyeToggle.classList.remove('fa-eye');
+                eyeToggle.classList.add('fa-eye-slash');
+            }
+        });
+
+        // Login button validation class
+        class LoginValidator {
+            static validate() {
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+
+                // Check if the password field is empty
+                if (email === '' || password === '') {
+                    alert('Please enter both email and password');
+                    return false;
+                }
+                return true;
+            }
+        }
+
+        // Handle login button click
+        const loginBtn = document.getElementById('loginBtn');
+        loginBtn.addEventListener('click', () => {
+            if (LoginValidator.validate()) {
+                // Perform the login action (You can link this with your backend here)
+                alert('Logged in successfully!');
+                // Redirect to the home page
+                window.location.href = "homepage.html";  // Replace with your home page URL
+            }
+        });
+
+        // Simulating Google login button click (you would need to integrate with Google OAuth API)
+        const googleLoginBtn = document.getElementById('googleLogin');
+        googleLoginBtn.addEventListener('click', () => {
+            alert('Redirecting to Google login...');
+            // Actual Google login code will go here (OAuth2 implementation)
+        });
+
+        // Handle Facebook login button click (you can integrate Facebook API as needed)
+        const facebookLoginBtn = document.getElementById('facebookLogin');
+        facebookLoginBtn.addEventListener('click', () => {
+            alert('Redirecting to Facebook login...');
+            // Actual Facebook login code will go here (Facebook SDK implementation)
+        });
+    </script>
+
+    <!-- Google API Script -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <!-- Google Login Button -->
+    <div id="googleLogin"></div>
+
+    <script>
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            var id_token = googleUser.getAuthResponse().id_token;
+
+            console.log("Google ID Token: " + id_token);  // You can send this ID token to your server for validation
+
+            // Perform actions with the user's information
+            alert("Logged in as: " + profile.getName());
+
+            // Redirect to the home page after Google login
+            window.location.href = "home.html";  // Replace with your home page URL
+        }
+
+        function renderGoogleButton() {
+            gapi.signin2.render('googleLogin', {
+                'scope': 'profile email',
+                'width': 250,
+                'height': 50,
+                'longtitle': true,
+                'theme': 'dark',
+                'onsuccess': onSignIn
+            });
+        }
+
+        // Initialize the Google button
+        renderGoogleButton();
+    </script>
+</body>
+
+</html>
